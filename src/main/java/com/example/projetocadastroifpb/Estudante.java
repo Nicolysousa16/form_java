@@ -13,7 +13,7 @@ public record Estudante(
         String cidade,
         String turno,
         boolean participaProjeto,
-        String observacoes) {
+        String observ) {
 
     public Estudante comId(Integer novoId) {
         return new Estudante(
@@ -27,9 +27,12 @@ public record Estudante(
                 cidade,
                 turno,
                 participaProjeto,
-                observacoes);
+                observ);
+
 
 
     }
-
+    public boolean observacoes() {
+        return false;
+    }
 }

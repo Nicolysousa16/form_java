@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Estudantes</title>
+    <link rel="stylesheet" href="/css/lista.css">
 </head>
 <body>
 <main>

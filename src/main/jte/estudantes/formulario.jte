@@ -11,6 +11,7 @@
 <img src="/images/ifpb_cz.png" alt="IFPB Campus Cajazeiras">
 <body>
     <h1>Novo estudante</h1>
+
     <form method="post" action="/estudantes">
         <input type="hidden" name="id" value="0">
         <div class="tudo">
@@ -37,7 +38,7 @@
             <div class="terc_coluna">
 
                 <label for="dataNascimento">Data de Nascimento</label>
-                <input type="LocalDate" id="dataNascimento" name="dataNascimento">
+                <input type="date" id="dataNascimento" name="dataNascimento">
 
                 <label for="turma">Turma</label>
                 <select id="turma" name="turma">

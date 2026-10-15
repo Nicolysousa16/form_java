@@ -1,6 +1,7 @@
 @import com.example.projetocadastroifpb.Estudante
 @import java.util.List
 @param List<Estudante> estudantes
+@param String busca
 
 <!doctype html>
 <html lang="pt-BR">
@@ -12,6 +13,14 @@
 <body>
 <main>
     <h1>Estudantes</h1>
+    <div class="buscar">
+        <form class="busca" method="get" action="/listar">
+            <label for="busca">Buscar por nome</label>
+            <input type="search" id="busca" name="busca" value="${busca}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
     <div>
         <table>
             <thead>
@@ -19,6 +28,7 @@
                 <th>ID</th><th>Nome</th><th>E-mail</th><th>Telefone</th>
                 <th>Nascimento</th><th>Ingresso</th><th>Turma</th>
                 <th>Cidade</th><th>Turno</th><th>Projeto</th><th>Observações</th>
+                <th>Ações</th>
             </tr>
             </thead>
             <tbody>
@@ -35,6 +45,9 @@
                     <td>${estudante.turno()}</td>
                     <td>${estudante.participaProjeto() ? "Sim" : "Não"}</td>
                     <td>${estudante.observacoes()}</td>
+                    <td class="acoes">
+                        <a href="/estudantes/${estudante.id()}">Ver</a>
+                    </td>
                 </tr>
             @else
                 <tr><td colspan="11">Nenhum estudante cadastrado.</td></tr>
